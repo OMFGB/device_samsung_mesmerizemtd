@@ -26,4 +26,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_mesmerizemtd.mk
+    $(LOCAL_DIR)/mesmerizemtd.mk

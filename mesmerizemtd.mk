@@ -42,24 +42,24 @@ DEVICE_PACKAGE_OVERLAYS := device/samsung/mesmerizemtd/overlay
 
 # These are the hardware-specific configuration files
 PRODUCT_COPY_FILES := \
-	device/samsung/fascinatemtd/asound.conf:system/etc/asound.conf \
-	device/samsung/fascinatemtd/vold.fstab:system/etc/vold.fstab \
+	device/samsung/mesmerizemtd/asound.conf:system/etc/asound.conf \
+	device/samsung/mesmerizemtd/vold.fstab:system/etc/vold.fstab \
 	device/samsung/aries-common/egl.cfg:system/lib/egl/egl.cfg
 
 # Init files
 PRODUCT_COPY_FILES += \
 	device/samsung/aries-common/init.rc:root/init.rc \
-	device/samsung/fascinatemtd/init.aries.rc:root/init.aries.rc \
-	device/samsung/fascinatemtd/ueventd.aries.rc:root/ueventd.aries.rc \
+	device/samsung/mesmerizemtd/init.aries.rc:root/init.aries.rc \
+	device/samsung/mesmerizemtd/ueventd.aries.rc:root/ueventd.aries.rc \
 	device/samsung/aries-common/setupenv.sh:recovery/root/sbin/setupenv.sh
 
 
 # Prebuilt kl keymaps
 PRODUCT_COPY_FILES += \
 	device/samsung/aries-common/cypress-touchkey.kl:system/usr/keylayout/cypress-touchkey.kl \
-	device/samsung/fascinatemtd/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
-	device/samsung/fascinatemtd/aries-keypad.kl:system/usr/keylayout/aries-keypad.kl \
-	device/samsung/fascinatemtd/s3c-keypad.kl:system/usr/keylayout/s3c-keypad.kl
+	device/samsung/mesmerizemtd/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
+	device/samsung/mesmerizemtd/aries-keypad.kl:system/usr/keylayout/aries-keypad.kl \
+	device/samsung/mesmerizemtd/s3c-keypad.kl:system/usr/keylayout/s3c-keypad.kl
 
 # Generated kcm keymaps
 PRODUCT_PACKAGES := \
@@ -127,7 +127,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
        ro.cdma.home.operator.alpha=uscc \
        ro.cdma.homesystem=64,65,76,77,78,79,80,81,82,83 \
        ro.cdma.data_retry_config=default_randomization=2000,0,0,120000,180000,540000,960000 \
-       ro.cdma.otaspnumschema=SELC,1,80,99 \
+       ro.cdma.otaspnumschema=SELC,3,00,07,80,87,88,99 \
        ro.telephony.call_ring.multiple=false \
        ro.telephony.call_ring.delay=3000 \
        ro.telephony.call_ring.absent=true \
@@ -173,12 +173,12 @@ PRODUCT_LOCALES := hdpi
 
 # kernel modules
 PRODUCT_COPY_FILES += \
-    device/samsung/fascinatemtd/bcm4329.ko:system/lib/modules/bcm4329.ko \
-    device/samsung/fascinatemtd/cifs.ko:system/lib/modules/cifs.ko \
-    device/samsung/fascinatemtd/tun.ko:system/lib/modules/tun.ko
+    device/samsung/mesmerizemtd/bcm4329.ko:system/lib/modules/bcm4329.ko \
+    device/samsung/mesmerizemtd/cifs.ko:system/lib/modules/cifs.ko \
+    device/samsung/mesmerizemtd/tun.ko:system/lib/modules/tun.ko
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-    LOCAL_KERNEL := device/samsung/fascinatemtd/kernel
+    LOCAL_KERNEL := device/mesmerize/fascinatemtd/kernel
 else
     LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
