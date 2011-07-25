@@ -178,7 +178,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/mesmerizemtd/tun.ko:system/lib/modules/tun.ko
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-    LOCAL_KERNEL := device/samsung/mesmerize/kernel
+    LOCAL_KERNEL := device/samsung/mesmerizemtd/kernel
 else
     LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
