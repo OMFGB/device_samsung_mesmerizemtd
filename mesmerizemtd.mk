@@ -186,6 +186,10 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
+# Bluetooth MAC Address
+PRODUCT_PACKAGES += \
+  bdaddr_read
+
 PRODUCT_COPY_FILES += \
     device/samsung/aries-common/updater_cdma.sh:updater.sh
 
